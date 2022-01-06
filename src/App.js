@@ -10,16 +10,17 @@ import { CreateTodoBtn } from './CreateTodoBtn.js';
 
 const todos = [
   { text: 'Cortar Cebolla', completed: false},
-  { text: 'Cepillarse los dientes', completed: false},
+  { text: 'Cepillarse los dientes ljlkjoijoijoijoijoijoijoijljlkjoijoijoij', completed: false},
   { text: 'Ordenar la ropa', completed: false},
   
 ]
 
 function App() {
   return (
-      <React.Fragment>
+      <div className="container">
+        <h1> 👋 Whats up for today? </h1>
         <TodoCounter/>
-    
+
         <TodoSearch/>
 
         <TodoList>
@@ -29,7 +30,7 @@ function App() {
         </TodoList>
 
         <CreateTodoBtn/>
-     </React.Fragment>
+      </div>
   );
 }
 
