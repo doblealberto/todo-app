@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React from 'react';
-import { TodoCounter } from './TodoCounter.js';
-import { TodoSearch } from './TodoSearch.js';
-import { TodoList } from './TodoList.js';
-import { TodoItem } from './TodoItem.js';
-import { CreateTodoBtn } from './CreateTodoBtn.js';
+import { TodoCounter } from '../TodoCounter';
+import { TodoSearch } from '../TodoSearch';
+import { TodoList } from '../TodoList';
+import { TodoItem } from '../TodoItem';
+import { CreateTodoBtn } from '../CreateTodoBtn';
 
 
 const todos = [
@@ -14,6 +14,7 @@ const todos = [
   { text: 'Ordenar la ropa', completed: false},
   
 ]
+const [todosValue, todosSetState] = React.UseState(todos)
 
 function App() {
   return (
