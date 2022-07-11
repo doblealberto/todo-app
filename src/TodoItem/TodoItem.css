@@ -22,3 +22,14 @@ todo-text {
     border: 0;
 }
 
+.checkelement--completed{
+    text-decoration: line-through;
+}
+.deleteIcon{
+    font-size: 25px;
+}
+.deleteIcon:hover{
+    color: red;
+    cursor: pointer;
+}
+

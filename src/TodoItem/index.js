@@ -11,15 +11,15 @@ function TodoItem(props) {
     return(
         <li>
             <input 
-                className="checkelement"
+                className='checkelement '
                 type="checkbox"
                 checked={props.completed}
-                onChange={completeTodo}
+                onChange={props.onComplete}
                 />
                 {console.log(props.text)}
-            <div className="todo-text">{props.text}</div>
+            <div className={`todo-text ${props.completed && 'checkelement--completed'}`}>{props.text}</div>
             <span 
-            className="fa fa-close" 
+            className="fa fa-close deleteIcon" 
             onclick={deleteTodo}>x
             </span>
         </li>

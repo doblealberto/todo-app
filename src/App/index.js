@@ -20,12 +20,11 @@ function App() {
   const totalTodos = todos.length
   const completedTodos = todos.filter((todo)=>!!todo.completed).length
   const completeTodo = (text) => {
-    const todoIndex = todos.indexOf(text)
+    const todoIndex = todos.findIndex(todo => todo.text === text)
+    console.log(text)
     const newTodos = [...todos];
-    if(newTodos[todoIndex] === newTodos[todoIndex].text){
-      newTodos[todoIndex].completed = true;
-    }
-    return todos = newTodos;
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed
+    setTodos(newTodos)
   }
 
   let searchedTodos = [];
@@ -56,7 +55,8 @@ function App() {
             <TodoItem 
               key={todo.text} 
               text={todo.text}
-              completed={completedTodo}
+              completed={todo.completed}
+              onComplete={() => completeTodo(todo.text)}
               />
           )))}
         </TodoList>
