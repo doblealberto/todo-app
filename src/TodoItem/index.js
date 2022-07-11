@@ -2,11 +2,9 @@ import React from 'react';
 import './TodoItem.css'
 
 function TodoItem(props) {
-    const completeTodo = (event) => {
-        console.log(event.target.checked)
-    }
-    const deleteTodo = (event) => {
-        console.log(event)
+    const onDelete = () =>
+    {
+        alert('Borraste un todo');
     }
     return(
         <li>
@@ -20,7 +18,7 @@ function TodoItem(props) {
             <div className={`todo-text ${props.completed && 'checkelement--completed'}`}>{props.text}</div>
             <span 
             className="fa fa-close deleteIcon" 
-            onclick={deleteTodo}>x
+            onClick={props.onDelete}>x
             </span>
         </li>
     )
