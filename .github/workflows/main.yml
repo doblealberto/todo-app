@@ -27,17 +27,16 @@ jobs:
   
 
   update-develop:
-    run_if:
-      if:  startsWith(github.head_ref, 'hotfix/')
-      runs-on: ubuntu-latest
-      steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: merge
-        uses: mtanzi/action-automerge@v1
-        id: merge
-        with:
-          github_token: ${{ github.token }}
-          source: 'main'
-          target: 'develop'
+    if:  startsWith(github.head_ref, 'hotfix/')
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: merge
+      uses: mtanzi/action-automerge@v1
+      id: merge
+      with:
+        github_token: ${{ github.token }}
+        source: 'main'
+        target: 'develop'
 
