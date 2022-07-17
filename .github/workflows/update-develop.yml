@@ -7,8 +7,9 @@ on:
 
 jobs:
   if_merged:
-    if: (github.head_ref == 'feature/theMegaComment' && github.event.pull_request.merged == true)
+    if: ((startsWith(github.head_ref, 'feature') || startsWith(github.head_ref, 'hotfix') || startsWith(github.head_ref, 'release')) && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
     - run: |
         echo merge from the MegaComment
+               
