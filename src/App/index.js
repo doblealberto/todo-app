@@ -11,7 +11,7 @@ import { CreateTodoBtn } from '../CreateTodoBtn';
 const defaultTodos = [
   { text: 'test2', completed: true},
   { text: 'test1', completed: false},
-  { text: 'Ordenar la ropa oasidjf', completed: true},
+  { text: 'sin ordenar la ropa', completed: true},
   
 ]
 function App() {
