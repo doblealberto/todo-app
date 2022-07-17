@@ -6,10 +6,28 @@ on:
       - main
 
 jobs:
-  if_merged:
+
+  merge-to-develop:
+    runs-on: ubuntu-latest
     if: ((startsWith(github.head_ref, 'feature') || startsWith(github.head_ref, 'hotfix') || startsWith(github.head_ref, 'release')) && github.event.pull_request.merged == true)
+    steps:
+      - uses: actions/checkout@master
+
+      - name: ${github.head_ref} -> develop 
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: ${github.head_ref}
+          target_branch: develop
+          github_token: ${{ github.token }}
+
+  delete-branch:
+    needs: merge-to-develop
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo merge from the MegaComment
+      - name: delete branch
+        uses: SvanBoxel/delete-merged-branch@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
                
