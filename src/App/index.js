@@ -9,7 +9,7 @@ import { CreateTodoBtn } from '../CreateTodoBtn';
 
 
 const defaultTodos = [
-  { text: 'test5', completed: true},
+  { text: 'The ultra comment', completed: true},
   { text: 'test4', completed: true},
   { text: 'back-to-test-4', completed: true},
   
