@@ -17,17 +17,10 @@ jobs:
         uses: devmasx/merge-branch@master
         with:
           type: now
-          from_branch: ${github.head_ref}
+          from_branch: ${{ github.head_ref }}
           target_branch: develop
           github_token: ${{ github.token }}
 
-  delete-branch:
-    needs: merge-to-develop
-    runs-on: ubuntu-latest
-    steps:
-      - name: delete branch
-        uses: SvanBoxel/delete-merged-branch@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
   
                
