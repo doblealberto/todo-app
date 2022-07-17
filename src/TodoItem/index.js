@@ -2,10 +2,6 @@ import React from 'react';
 import './TodoItem.css'
 
 function TodoItem(props) {
-    const onDelete = () =>
-    {
-        alert('Borraste un todo');
-    }
     return(
         <li>
             <input 
