@@ -1,4 +1,4 @@
-name: CI/CD
+name: Build and Deployment
 on:
   push:
     branches:
@@ -27,7 +27,7 @@ jobs:
   
 
   update-develop:
-    if:  startsWith(github.head_ref, 'hotfix/')
+    if: contains(github.head_ref, 'feature') || contains(github.head_ref, 'fix') || contains(github.head_ref, 'hotfix') 
     runs-on: ubuntu-latest
     steps:
     - name: checkout
