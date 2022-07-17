@@ -13,7 +13,7 @@ const defaultTodos = [
 
   { text: 'the ultra mega comment', completed: true},
 
-  { text: 'back-to-test-4', completed: true},
+  { text: 'the final mega commit', completed: true},
   
 ]
 function App() {
