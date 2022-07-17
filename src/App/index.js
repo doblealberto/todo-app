@@ -9,8 +9,8 @@ import { CreateTodoBtn } from '../CreateTodoBtn';
 
 
 const defaultTodos = [
-  { text: 'Cortar Cebolla', completed: true},
-  { text: 'Cepillarse los dientes ljlkjoijoijoijoijoijoijoijljlkjoijoijoij', completed: false},
+  { text: 'test2', completed: true},
+  { text: 'test1', completed: false},
   { text: 'Ordenar la ropa', completed: true},
   
 ]
