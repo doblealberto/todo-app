@@ -37,6 +37,6 @@ jobs:
         id: merge
         with:
           github_token: ${{ github.token }}
-          source: 'master'
+          source: 'main'
           target: 'develop'
 
