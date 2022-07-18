@@ -4,7 +4,7 @@
 Todo app is a simple ReactJs App deployed to github pages with the power of github actions!
 - [Getting started](#getting-started)
 - [Deployment configuration](#Deployment-configuration)
-- [About the actions](#Actions)
+- [About the workflows](#workflows)
 
 ![Example Image](https://drive.google.com/uc?id=1VsJwB_65ONGgvMNBziPBzWlDyXw4RYzw)
 
