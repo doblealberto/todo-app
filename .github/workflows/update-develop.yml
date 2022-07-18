@@ -22,7 +22,7 @@ jobs:
           github_token: ${{ github.token }}
 
   test:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     needs: merge-to-develop
     steps:
       - name: echoing 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
