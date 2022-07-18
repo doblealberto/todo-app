@@ -11,7 +11,7 @@ import { CreateTodoBtn } from '../CreateTodoBtn';
 const defaultTodos = [
   { text: 'The ultra comment 2', completed: true},
 
-  { text: 'the ultra mega comment', completed: true},
+  { text: 'Lost count', completed: true},
 
   { text: 'Final test', completed: true},
   
