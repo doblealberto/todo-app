@@ -21,17 +21,6 @@ jobs:
           target_branch: develop
           github_token: ${{ github.token }}
 
-  delete-merged-branch:
-    needs: merge-to-develop
-    runs-on: ubuntu-latest
-    steps:
-      - name: Delete merged branch
-        uses: koj-co/delete-merged-action@master
-        with:
-          branches: "!master, !production, !develop, *"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
-  
   
                
